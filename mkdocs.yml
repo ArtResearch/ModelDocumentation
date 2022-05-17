@@ -1,0 +1,26 @@
+site_name: Pharos Documentation
+theme:
+  name: material
+nav:
+  - Project Home: 'index.md'
+  - Providers: 'Providers.md'
+  - Authorities: 'Authorities.md'
+  - Reference Data Models:
+    - 'Instruction': 'Instructions.md' 
+    - 'Work': 'Work.md'
+    - 'Photo': 'Photo.md'
+    - 'Artist': 'Artist.md'
+    - 'Person': 'Person.md'
+    - 'Photographer': 'Photographer.md'
+    - 'Institution': 'Institution.md'
+    - 'Place': 'Place.md'
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - tables
+extra_css: 
+  - extra.css
