@@ -54,3 +54,5 @@ fr: [https://artresearch.net/resource/fr/](https://artresearch.net/resource/fr/)
 skos: [http://www.w3.org/2004/02/skos/core#](http://www.w3.org/2004/02/skos/core#)
 
 voc: [http://vocab.getty.edu/ontology#](http://vocab.getty.edu/ontology#)
+
+geo: [http://www.geonames.org/ontology#](http://www.geonames.org/ontology#)

@@ -53,13 +53,13 @@ The fields used to describe a photographer can be functionally grouped according
 
 |        #  |   Name             |    Description                                                 |   
 |----------:|:-------------------|:---------------------------------------------------------------|
-|        1  |   Person Info      |    this information category gathers  together descriptos  used for assigning names,types to a photographer, both at present and  historically, as well as descriptors relevant to the tracking of the birth and death of a photographer |
+|        1  |   Person Info      |    this information category gathers  together descriptos  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer |
 
 
 
 #### Person Info
 
-The attribution of names and types to photogrpahers is a basic human activity. A chief factor in disambiguating which photographer is referred to in historical texts is understanding the various names and identifiers that have been given to an individual at different moments. Likewise, additional classifiers of the individual as such, such as gender, help in the disambiguation, in an information system, of the reference to one real-world individual from another and biographical information, such as their birth and death. 
+This information category gathers  together descriptos  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer
 
 |Name|Description|Path|
 |:--|:---------|:--|

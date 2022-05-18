@@ -177,7 +177,6 @@ Skos relationships have been used
 |   Hertziana      |  https://www.biblhertz.it/en/photographic-collection/                          |
 
 
-__?categories should be part of person or of artist__
 
 #### Model Section Description
 

@@ -8,12 +8,12 @@ __Version:__ __current version__
 
 #### Fundamental  Relationships 
 
-Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. The fundamental relationships was based on __what ?__ 
+Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform.
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
 |Artist_created_Work|fr:Artist_created_Work|fc:work|This relationship is used to record all the works created by the documented artist.|
-|Artist_archives_at_Repository|fr:Artist_archives_at_Repository|fc:institution|This relationship is used to record the institution __?__ the documented artist.|
+|Artist_archives_at_Repository|fr:Artist_archives_at_Repository|fc:institution|This relationship is used to record the institution has archived the documented artist.|
 |Artist_has_Copyright_Status|fr:Artist_has_Copyright_Status|fc:copyright_status|This relationship is used to record the copyright status related with the documented artist.|
 |Artist_influenced_creation_of_Work|fr:Artist_influenced_creation_of_Work|fc:work|This relationship is used to record the works influenced by the documented artist.|
 |Artist_influenced_Artist|fr:Artist_influenced_Artist|fc:artist|This relationship is used to record the artists who were influenced by the documented artist.|

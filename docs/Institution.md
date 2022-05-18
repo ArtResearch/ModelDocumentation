@@ -8,9 +8,7 @@ cidoc crm relationships have been used
 |Name|Paths|
 |----|----|
 |identifier|crm:P1 -> crm:E42 -> rdfs:label|
-|name|crm:P1 -> crm:E41 -> rdfs:label|
-|name type|crm:P1 -> crm:E41 -> crm:P2 -> <[http://vocab.getty.edu/aat/300417193](http://vocab.getty.edu/aat/300417193)>|
-|institution|crm:P107 -> custom:noType|
+|type|crm:P2_has_type -> custom:noType|
 
 
 

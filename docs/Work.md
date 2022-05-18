@@ -106,7 +106,7 @@ A combination of cidoc crm ontology, fundamental categories and relationships wa
 |Curational Notes Type|-|crm:P67i -> crm:P67i -> crm:E73 [2] -> crm:P2 -> <[http://vocab.getty.edu/aat/300265639](http://vocab.getty.edu/aat/300265639)>|
 |Has Part|This fiels is used to indicate the works which are part of the documented work|crm:P46 -> fc:work|
 |Is Part Of|This field is used to indicate the works whose part is the documented work|crm:P46i -> fc:work|
-|Last Known Location|this field is used to indicate the last known locations of the documented work| ?s crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.|
+|Last Known Location|this field is used to indicate the last known locations of the documented work|crm:P74_has_current_or_former_residence|crm:P55_has_current_location|
 |Last Known Location|-||
 |Last Known Location|-||
 |Related Objects|This fiels is used to indicate the related objects to the documented work|crm:P67i -> crm:E73[3] -> crm:P70i -> fc:work|
