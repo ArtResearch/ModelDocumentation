@@ -1,18 +1,18 @@
-site_name: Pharos Documentation
+site_name: Artresearch Model Documentation
 theme:
   name: material
 nav:
-  - Project Home: 'index.md'
-  - Providers: 'Providers.md'
+  - Home: 'index.md'
+  - Photo Archives: 'PhotoArchives.md'
   - Authorities: 'Authorities.md'
   - Reference Data Models:
-    - 'Instruction': 'Instructions.md' 
-    - 'Work': 'Work.md'
-    - 'Photo': 'Photo.md'
+    - 'Instructions': 'Instructions.md' 
+    - 'Artwork / Monument': 'Artwork.md'
+    - 'Photograph': 'Photo.md'
     - 'Artist': 'Artist.md'
     - 'Person': 'Person.md'
     - 'Photographer': 'Photographer.md'
-    - 'Institution': 'Institution.md'
+    - 'Repository': 'Institution.md'
     - 'Place': 'Place.md'
 
 markdown_extensions:

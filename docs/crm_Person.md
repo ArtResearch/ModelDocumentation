@@ -7,7 +7,7 @@ __Version:__ __current version__
 
 #### Introduction
 
-The __crm:E21_Person__ reference data model provides a list of standard descriptors (fields) that are typically present in the description of a person in cultural heritage data systems. The intention of this reference model is to provide a consolidated, high-level formal structure comprising the most commonly reused descriptors for a person entity and, further, to provide for these a set of semantic mapping to the CIDOC CRM as well as skos and custom relationships , or others coming from ULAN . Moreover, each field is marked with respect to its potential functionality with regards to instance matching between overlapping datasets. This reference data model aims to serve a number of functions including:
+The __crm:E21_Person__ reference data model provides a list of standard descriptors (fields) that are typically present in the description of a person in cultural heritage data systems. The intention of this reference model is to provide a consolidated, high-level formal structure comprising the most commonly reused descriptors for a person entity and, further, to provide for these a set of semantic mapping to the [CIDOC-CRM](cidoc-crm.org) as well as skos and custom relationships , or others coming from ULAN . Moreover, each field is marked with respect to its potential functionality with regards to instance matching between overlapping datasets. This reference data model aims to serve a number of functions including:
 
 1. to support the creation of semantic data entry forms that will create ‘born semantic’ data streams
 
@@ -15,20 +15,20 @@ The __crm:E21_Person__ reference data model provides a list of standard descript
 
 3. to guide mapping processes of extant data sources with common mapping patterns
 
-4. to be adopted by institutions acting as aggregation hubs in order to create consistent re-expressions of extant reference information in a common CIDOC-CRM based expression.
+4. to be adopted by institutions acting as aggregation hubs in order to create consistent re-expressions of extant reference information in a common [CIDOC-CRM](cidoc-crm.org) based expression.
 
 
 
-#### cidoc crm Relationships 
+#### [CIDOC-CRM](cidoc-crm.org) Relationships 
 
-cidoc crm relationships have been used
+
 
 |Name|Paths|
 |----|----|
-|identifier|crm:P1 -> crm:E42 -> rdfs:label|
-|name|crm:P1 -> crm:E41 -> rdfs:label|
-|name type|crm:P1 -> crm:E41 -> crm:P2_has_type -> crm:E55_Type|
-|institution|crm:P107 -> custom:noType|
+|identifier|crm:P1 &rarr; crm:E42 &rarr; rdfs:label|
+|name|crm:P1 &rarr; crm:E41 &rarr; rdfs:label|
+|name type|crm:P1 &rarr; crm:E41 &rarr; crm:P2_has_type &rarr; crm:E55_Type|
+|institution|crm:P107 &rarr; custom:noType|
 
 
 
@@ -185,7 +185,7 @@ The fields used to describe a person can be functionally grouped according to hi
 |        #  |   Name             |    Description                                                 |   
 |----------:|:-------------------|:---------------------------------------------------------------|
 |        1  |   Person Info      |    this information category gathers  together descriptos  used for assigning names,types to a person, both at present and  historically, as well as descriptors relevant to the tracking of the birth and death of a person |
-|        2  |   Person Relationships |  This information category is used to bring together information of relationships related to the documented person.|
+|        2  |   Person Relationships |  This information category presents information of relationships related to the documented person.|
 
 
 
@@ -195,39 +195,39 @@ The attribution of names and types to persons is a basic human activity. A chief
 
 |Name|Description|Path|
 |:--|:---------|:--|
-|Identifier|This field is used to indicate an identifier attributed to the documented person.|crm:P1 -> crm:E42 -> rdfs:label|
-|Residence/Location|this field is used to indicate the residnce/location attributed to the person| crm:P74 -> rdfs:label|
-|Name|This field is used to record the main name attributed to the documented person.|crm:P1 -> crm:E41 -> rdfs:label|
-|Name Type|This field is used to indicate a type of a specific part of the name attributed to the documented person.|crm:P1 -> crm:E41 -> crm:P2_has_type -> crm:E55_Type|
+|Identifier|This field is used to indicate an identifier attributed to the documented person.|crm:P1 &rarr; crm:E42 &rarr; rdfs:label|
+|Residence/Location|this field is used to indicate the residnce/location attributed to the person| crm:P74 &rarr; rdfs:label|
+|Name|This field is used to record the main name attributed to the documented person.|crm:P1 &rarr; crm:E41 &rarr; rdfs:label|
+|Name Type|This field is used to indicate a type of a specific part of the name attributed to the documented person.|crm:P1 &rarr; crm:E41 &rarr; crm:P2_has_type &rarr; crm:E55_Type|
 |Place of Birth|This field is used to indicate the place of birth of the documented person.|fr:Person_has_Place_of_Birth|
 |Place of Death|This field is used to indicate the place of death of the documented person.|fr:Person_has_Place_of_Death|
-|Active|This field is used to indicate the period within the documented person was active.| crm:P14i -> crm:F51_Pursuit -> crm:P4 -> crm:E52 -> crm:P82 |
-|Active in|This fields is used to indicate where the documented person is active in| crm:P74|crm:P55 -> |
-|Institution|This field is used to record the institution to which the documented person is or was memebr of.|crm:P107 -> custom:noType|
-|Nationality|This field is used to record the association of the documented person to a national body, usually indicating citizenship.|fr:Person_has_Nationality -> fc:Person|
-|Gender|This field is used to record the gender ascribed of the documented person.|fr:Person_has_Gender -> xsd:string|
+|Active|This field is used to indicate the period within the documented person was active.| crm:P14i &rarr; crm:F51_Pursuit &rarr; crm:P4 &rarr; crm:E52 &rarr; crm:P82 |
+|Active in|This fields is used to indicate where the documented person is active in| crm:P74|crm:P55 &rarr; |
+|Institution|This field is used to record the institution to which the documented person is or was memebr of.|crm:P107 &rarr; custom:noType|
+|Nationality|This field is used to record the association of the documented person to a national body, usually indicating citizenship.|fr:Person_has_Nationality &rarr; fc:Person|
+|Gender|This field is used to record the gender ascribed of the documented person.|fr:Person_has_Gender &rarr; xsd:string|
 |Roles|This field is used to record the roles attributed to the documented person.|fr:Person_has_Role|
-|Date of Birth|This field is used to record the  date for the birth of the documented person.|fr:Person_has_Date_of_Birth\|fr:Artist_has_Date_of_Birth -> xsd:date|
-|Date of Death|This field is used to record the  date for the death of the documented person.|fr:Person_has_Date_of_Death\|fr:Artist_has_Date_of_Death -> xsd:date|
-|Partner|This field is used to record the partners attributed to the documented person.|fr:Person_partner_of_Person -> fc:Person|
+|Date of Birth|This field is used to record the  date for the birth of the documented person.|fr:Person_has_Date_of_Birth\|fr:Artist_has_Date_of_Birth &rarr; xsd:date|
+|Date of Death|This field is used to record the  date for the death of the documented person.|fr:Person_has_Date_of_Death\|fr:Artist_has_Date_of_Death &rarr; xsd:date|
+|Partner|This field is used to record the partners attributed to the documented person.|fr:Person_partner_of_Person &rarr; fc:Person|
 
 
 
 #### Person Relationships
 |Name|Description|Path|
 |:--|:---------|:--|
-|Teachers|This field is used to indicate the theachers who are attributed to the documented person.| fr:Person_student_of_Person\|fr:Person_apprentice_of_Person -> fc:person|
-|School Of|This field is used to indicate the person who is school of the dociumented person.|fr:Person_school_of_Person -> fc:person|
-|Influenced by|This field is used to indicate the person who influenced the dociumented person.|fr:Person_influenced_by_Person -> fc:person|
-|Collaborators|This field is used to indicate Collaborators of the documented person, retrieved from ULAN.|fr:Person_collaborated_with_Person\|fr:Person_assisted_by_Person -> fc:person|
-|Students|This field is used to indicate the students of the documented person|fr:Person_teacher_of_Person -> fc:person|
-|Influenced|This field is used to indicate the persons which influenced the documented person|fr:Person_influenced_Person -> fc:person|
-|Member Of|This field is used to indicate the Person or Group of which the documented person is member of|fr:Person_member_of_Group\|fr:Person_member_of_Person -> fc:person\|fc:group|
-|Parents|This field is used to indicate the parents of the documented person |fr:Person_child_of_Person -> fc:person|
-|Siblings|This field is used to indicate the siblings of the documented person|fr:Person_sibling_of_Person -> fc:person|
-|Partner|This field is used to indicate the partners of the documented person|fr:Person_partner_of_Person -> fc:person|
-|Spouse|This fields is used to indicate the spouse of the documented person|fr:Person_spouse_of_Person -> fc:person|
-|Children|This field is used to indicate the children of the documented person|fr:Person_parent_of_Person -> fc:person|
+|Teachers|This field is used to indicate the theachers who are attributed to the documented person.| fr:Person_student_of_Person\|fr:Person_apprentice_of_Person &rarr; fc:person|
+|School Of|This field is used to indicate the person who is school of the dociumented person.|fr:Person_school_of_Person &rarr; fc:person|
+|Influenced by|This field is used to indicate the person who influenced the dociumented person.|fr:Person_influenced_by_Person &rarr; fc:person|
+|Collaborators|This field is used to indicate Collaborators of the documented person, retrieved from ULAN.|fr:Person_collaborated_with_Person\|fr:Person_assisted_by_Person &rarr; fc:person|
+|Students|This field is used to indicate the students of the documented person|fr:Person_teacher_of_Person &rarr; fc:person|
+|Influenced|This field is used to indicate the persons which influenced the documented person|fr:Person_influenced_Person &rarr; fc:person|
+|Member Of|This field is used to indicate the Person or Group of which the documented person is member of|fr:Person_member_of_Group\|fr:Person_member_of_Person &rarr; fc:person\|fc:group|
+|Parents|This field is used to indicate the parents of the documented person |fr:Person_child_of_Person &rarr; fc:person|
+|Siblings|This field is used to indicate the siblings of the documented person|fr:Person_sibling_of_Person &rarr; fc:person|
+|Partner|This field is used to indicate the partners of the documented person|fr:Person_partner_of_Person &rarr; fc:person|
+|Spouse|This fields is used to indicate the spouse of the documented person|fr:Person_spouse_of_Person &rarr; fc:person|
+|Children|This field is used to indicate the children of the documented person|fr:Person_parent_of_Person &rarr; fc:person|
 
 
 
