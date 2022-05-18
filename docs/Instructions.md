@@ -11,11 +11,11 @@ Moreover, when it is necessary to make explicit that the same node is referenced
 
 For example, the descriptor ‘identifier’ for an instance of person is mapped as:
 
-1.  __E21 -> P1 -> E42 [1]__
+1.  __crm:E21 -> crm:P1 -> crm:E42 [1]__
 
 The descriptor for the provider of this identifier, ‘Identifier Provider’ refers back semantically to the ‘Identifier’ descriptor (qua appellation), hence in the semantic mapping the particular individual node is referred back to as the subject of the act of being given an appellation. Expressed in our formalism this becomes:
 
-1.  __E21 -> P1 -> E42 [1]__ -> P37i -> E15 -> P14 -> E39 
+1.  __crm:E21 -> crm:P1 -> crm:E42 [1]__ -> crm:P37i -> crm:E15 -> crm:P14 -> crm:E39 
 
 The variable [1] in the second mapping is provided to signal to the reader that the same node (instance of class E42) is being referred to across two mappings, the first of the identifier as such and the second of its being attributed by some organization.
 
@@ -41,11 +41,7 @@ owl: [http://www.w3.org/2002/07/owl#](http://www.w3.org/2002/07/owl#)
 
 original: [http://foto.biblhertz.it/](http://foto.biblhertz.it/)
 
-iiif_image: [https://ids.lib.harvard.edu/ids/iiif/](https://ids.lib.harvard.edu/ids/iiif/)
-
 image: [http://fotothek.biblhertz.it/bh/320px/](http://fotothek.biblhertz.it/bh/320px/)
-
-iiif_json: [https://foto.biblhertz.it/exist/foto/](https://foto.biblhertz.it/exist/foto/)
 
 ico: [http://iconclass.org/](http://iconclass.org/)
 

@@ -11,7 +11,6 @@ Achieving these objectives meant overcoming common challenges and also creating 
 
 1. Ontological Modelling Patterns
 2. Reference Data Models
-3. Ontology Extensions
 
 
 #### __Ontological Modelling Patterns__
@@ -28,19 +27,18 @@ Each available template is a collection of descriptors for a specific entity, an
 The Semantic Reference Data Models are produced by the **more info here** and describe the following entities:
 
 
+* [Person](Person.md)
 * [Artist](Artist.md)
-* Photo
-* Photographer
-* Place
-* Repository
-* Work
+* [Photographer](Photographer.md)
+* [Work](Work.md)
+* [Photo](Photo.md)
+* [Place](Place.md)
+* [Repository](Institution.md)
+
 
 
 Each of the Models listed above present an initial introduction of the sources and the methodology used for grounding the model. Following this introduction, each descriptor is defined, and its modelling in provided in textual, graphical form and RDF turtle representation.
 
-
-#### __Ontology Extension__
-Within the project some (very few really) properties and classes have been created as an extension of CIDOC-CRM or other ontologies. In this section we list them, pointing to the reader to their usefulness and where they can be found.
 
 
 

@@ -1,47 +1,3 @@
-
- "relationship" ,
- "https://artresearch.net/resource/fr/Place_of_Work" ,
- "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" ,
- "http://www.w3.org/2000/01/rdf-schema#label" ,
- "http://www.cidoc-crm.org/cidoc-crm/P2_has_type" ,
- "http://www.w3.org/2003/01/geo/wgs84_pos#lat" ,
- "http://www.w3.org/2003/01/geo/wgs84_pos#long" ,
- "http://www.geonames.org/ontology#name" ,
- "http://www.geonames.org/ontology#parentADM1" ,
- "http://www.geonames.org/ontology#parentCountry" ,
- "http://www.geonames.org/ontology#population" ,
- "https://artresearch.net/resource/fr/Place_depicted_by" ,
- "https://artresearch.net/resource/fr/Place_of_Artist" ,
- "https://artresearch.net/resource/fr/Place_was_birthplace_of_Artist" ,
- "https://artresearch.net/resource/fr/Place_was_worklocation_of_Artist" ,
- "http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by" ,
- "https://artresearch.net/resource/custom/fr/Place_of_Artist" ,
- "https://artresearch.net/resource/fr/Place_was_deathplace_of_Artist" ,
- "https://artresearch.net/resource/fr/Place_of_Institution" ,
- "https://artresearch.net/resource/fr/Place_was_birthplace_of_Photographer" ,
- "https://artresearch.net/resource/fr/Place_was_deathplace_of_Photographer" ,
- "http://www.w3.org/2002/07/owl#sameAs" ,
- "http://www.geonames.org/ontology#alternateName" ,
- "http://www.geonames.org/ontology#countryCode" ,
- "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" ,
- "http://www.w3.org/2000/01/rdf-schema#seeAlso" ,
- "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by" ,
- "http://www.geonames.org/ontology#featureClass" ,
- "http://www.geonames.org/ontology#featureCode" ,
- "http://www.geonames.org/ontology#locationMap" ,
- "http://www.geonames.org/ontology#nearbyFeatures" ,
- "http://www.geonames.org/ontology#parentADM2" ,
- "http://www.geonames.org/ontology#parentADM3" ,
- "http://www.geonames.org/ontology#parentFeature" ,
- "http://www.geonames.org/ontology#wikipediaArticle" ,
- "http://www.w3.org/2003/01/geo/wgs84_pos#alt" ,
-
-
-
-
-
-
-
 # fc:place Reference Data Model
 
 __Author:__ __the name of the author__
@@ -63,7 +19,7 @@ In this section will be presented all the relationships which are connected to t
 
 #### Fundamental  Relationships 
 
-Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. The fundamental relationships was based on __what ?__ 
+Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform.
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
@@ -143,7 +99,7 @@ A combination of cidoc crm ontology, fundamental categories and relationships wa
 |Curational Notes Type|-|crm:P67i -> crm:P67i -> crm:E73 [2] -> crm:P2 -> <[http://vocab.getty.edu/aat/300265639](http://vocab.getty.edu/aat/300265639)>|
 |Has Part|This fiels is used to indicate the works which are part of the documented work|crm:P46 -> fc:work|
 |Is Part Of|This field is used to indicate the works whose part is the documented work|crm:P46i -> fc:work|
-|Last Known Location|this field is used to indicate the last known locations of the documented work| ?s crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.|
+|Last Known Location|this field is used to indicate the last known locations of the documented work|crm:P74_has_current_or_former_residence|crm:P55_has_current_location.|
 |Last Known Location|-||
 |Last Known Location|-||
 |Related Objects|This fiels is used to indicate the related objects to the documented work|crm:P67i -> crm:E73[3] -> crm:P70i -> fc:work|

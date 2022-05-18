@@ -19,7 +19,7 @@ In this section will be presented all the relationships which are connected to t
 
 #### Fundamental  Relationships 
 
-Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. The fundamental relationships was based on __what ?__ 
+Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. 
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
@@ -45,7 +45,7 @@ Fundamental relationships were created for the implementation of the Advanced Se
 #### Custom Relationships 
 
 |Name|Relationship|Description|
-|--|--|--|---|
+|--|--|--|
 |has provider|custom:has_provider|This relationship is used to indicate the provider of the photo
 |has type|custom:has_type| This relationship is used to indicate if the photo is a primary photography and/or photomechanical prints of the documented photography
 

@@ -18,7 +18,7 @@ In this section will be presented all the relationships which are connected to t
 
 #### Fundamental Relationships 
 
-Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. The fundamental relationships was based on __what ?__ 
+Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. 
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
@@ -39,9 +39,9 @@ Fundamental relationships were created for the implementation of the Advanced Se
 |--|--|--|
 |has provider|custom:has_provider|This relationship is used to indicate the provider of the photo
 |has type|custom:has_type| This relationship is used to indicate if the photo is a primary photography and/or photomechanical prints of the documented photography
-|recto has sequence|custom:recto_has_sequence|__?__|
-|verso has sequence|custom:verso_has_sequence|__?__|
-|has original record|custom:has_original_record|This relationship is used to indicate the original records of the documented photography.
+|recto has sequence|custom:recto_has_sequence|This relationship is used to indicate if the recto view of the photography has a sequence|
+|verso has sequence|custom:verso_has_sequence|This relationship is used to indicate if the verso view of the photography has a sequence|
+|has original record|custom:has_original_record|This relationship is used to indicate the original records of the documented photography|
 
 
 

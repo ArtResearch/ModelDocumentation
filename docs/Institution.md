@@ -16,7 +16,7 @@ cidoc crm relationships have been used
 
 #### Fundamental  Relationships 
 
-Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. The fundamental relationships was based on __what ?__ 
+Fundamental relationships were created for the implementation of the Advanced Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. 
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
