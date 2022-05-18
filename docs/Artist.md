@@ -223,6 +223,7 @@ The attribution of names and types to persons is a basic human activity. A chief
 
 
 ##### Person Relationships
+
 |Name|Description|Path|
 |:--|:---------|:--|
 |Teachers|This field is used to indicate the theachers who are attributed to the documented person.| fr:Person_student_of_Person\|fr:Person_apprentice_of_Person -> fc:person|

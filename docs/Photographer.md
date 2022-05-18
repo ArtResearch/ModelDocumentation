@@ -53,13 +53,13 @@ The fields used to describe a photographer can be functionally grouped according
 
 |        #  |   Name             |    Description                                                 |   
 |----------:|:-------------------|:---------------------------------------------------------------|
-|        1  |   Person Info      |    this information category gathers  together descriptos  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer |
+|        1  |   Person Info      |    this information category gathers  together descriptor  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer |
 
 
 
 #### Person Info
 
-This information category gathers  together descriptos  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer
+This information category gathers  together descriptors  used for assigning names,types to a photographer,  as well as descriptors relevant to the tracking of the birth and death of a photographer
 
 |Name|Description|Path|
 |:--|:---------|:--|
