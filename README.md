@@ -19,7 +19,7 @@ docker pull squidfunk/mkdocs-material
 ## start MkDocs localhost server
 (run in PowerShell if you are in Windows and) run:
 ```bash
-docker run -d --rm -it -p 10000:8080 -v ${PWD}:/docs squidfunk/mkdocs-material
+docker run -d --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
 open [localhost](http://localhost:10000/) to walk-through the documentation 
