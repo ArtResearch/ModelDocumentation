@@ -22,4 +22,11 @@ docker pull squidfunk/mkdocs-material
 docker run -d --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
-open [localhost](http://localhost:10000/) to walk-through the documentation 
+open [localhost](http://localhost:8000/) to walk-through the documentation
+
+## start MkDocs cloud server with Let's Encrypt
+(run in PowerShell if you are in Windows and) run:
+```bash
+docker-compose up -d
+```
+
