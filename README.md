@@ -25,6 +25,12 @@ docker run -d --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 open [localhost](http://localhost:8000/) to walk-through the documentation
 
 ## start MkDocs cloud server with Let's Encrypt
+
+### Prerequisites
+
+[Nginx] (https://github.com/ArtResearch/nginx-pharos) instace up and running 
+
+### Set up
 (run in PowerShell if you are in Windows and) run:
 ```bash
 docker-compose up -d
