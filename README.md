@@ -28,7 +28,7 @@ open [localhost](http://localhost:8000/) to walk-through the documentation
 
 ### Prerequisites
 
-[Nginx] (https://github.com/ArtResearch/nginx-pharos) instace up and running 
+[Nginx](https://github.com/ArtResearch/nginx-pharos) instace up and running 
 
 ### Set up
 (run in PowerShell if you are in Windows and) run:
