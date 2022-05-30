@@ -5,3 +5,6 @@ td {
 .md-header{
     background-color: #701919 !important;
 }
+
+.md-footer-meta.md-typeset { display: none;}
+
