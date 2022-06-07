@@ -34,9 +34,9 @@ Fundamental relationships were created for the implementation of the Contextual 
 |has provider|custom:has_provider|Refers to the provider of the documented institution.|
 |has type|custom:has_type|Refers to that the documented institution is of type 'Pharos'.|
 
-### [CIDOC-CRM](cidoc-crm.org) Relationships 
+### [CIDOC-CRM](https://www.cidoc-crm.org/) Relationships 
 
-[CIDOC-CRM](cidoc-crm.org) relationships were used
+[CIDOC-CRM](https://www.cidoc-crm.org/) relationships were used
 
 |Name|Paths|
 |----|----|

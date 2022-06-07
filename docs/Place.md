@@ -41,7 +41,7 @@ GeoNames relationships were used in order to specify the location of the place
 The [GeoNames Ontology](https://www.geonames.org/ontology/documentation.html) was used for the hierarchy of geoname places.
 
 
-### [CIDOC-CRM](cidoc-crm.org) Relationships 
+### [CIDOC-CRM](https://www.cidoc-crm.org/) Relationships 
 
 |Name|Paths|
 |----|----|
@@ -50,7 +50,7 @@ The [GeoNames Ontology](https://www.geonames.org/ontology/documentation.html) wa
 
 ## Model Section Description
 
-A combination of [CIDOC-CRM](cidoc-crm.org) ontology, fundamental categories and relationships was used in order to achieve the most efficient way for the retrieval of the semantic data. The fields used to describe a place can be functionally grouped according to higher level units in order to allow for an easier approach to the navigation of the data by information category. The information categories identified have been enumerated in the following table.
+A combination of [CIDOC-CRM](https://www.cidoc-crm.org/) ontology, fundamental categories and relationships was used in order to achieve the most efficient way for the retrieval of the semantic data. The fields used to describe a place can be functionally grouped according to higher level units in order to allow for an easier approach to the navigation of the data by information category. The information categories identified have been enumerated in the following table.
 
 |        #  |   Name             |    Description                                                 |   
 |----------:|:-------------------|:---------------------------------------------------------------|

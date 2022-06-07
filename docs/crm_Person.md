@@ -7,7 +7,7 @@ __Version:__ __current version__
 
 #### Introduction
 
-The __crm:E21_Person__ reference data model provides a list of standard descriptors (fields) that are typically present in the description of a person in cultural heritage data systems. The intention of this reference model is to provide a consolidated, high-level formal structure comprising the most commonly reused descriptors for a person entity and, further, to provide for these a set of semantic mapping to the [CIDOC-CRM](cidoc-crm.org) as well as skos and custom relationships , or others coming from ULAN . Moreover, each field is marked with respect to its potential functionality with regards to instance matching between overlapping datasets. This reference data model aims to serve a number of functions including:
+The __crm:E21_Person__ reference data model provides a list of standard descriptors (fields) that are typically present in the description of a person in cultural heritage data systems. The intention of this reference model is to provide a consolidated, high-level formal structure comprising the most commonly reused descriptors for a person entity and, further, to provide for these a set of semantic mapping to the [CIDOC-CRM](https://www.cidoc-crm.org/) as well as skos and custom relationships , or others coming from ULAN . Moreover, each field is marked with respect to its potential functionality with regards to instance matching between overlapping datasets. This reference data model aims to serve a number of functions including:
 
 1. to support the creation of semantic data entry forms that will create ‘born semantic’ data streams
 
@@ -15,11 +15,11 @@ The __crm:E21_Person__ reference data model provides a list of standard descript
 
 3. to guide mapping processes of extant data sources with common mapping patterns
 
-4. to be adopted by institutions acting as aggregation hubs in order to create consistent re-expressions of extant reference information in a common [CIDOC-CRM](cidoc-crm.org) based expression.
+4. to be adopted by institutions acting as aggregation hubs in order to create consistent re-expressions of extant reference information in a common [CIDOC-CRM](https://www.cidoc-crm.org/) based expression.
 
 
 
-#### [CIDOC-CRM](cidoc-crm.org) Relationships 
+#### [CIDOC-CRM](https://www.cidoc-crm.org/) Relationships 
 
 
 

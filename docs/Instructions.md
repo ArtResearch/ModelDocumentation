@@ -1,8 +1,8 @@
 # Instructions
 
-Each information category is represented here both in the form of a table and a semantic graph model. The graph presents an overview of the semantic model formed by the suggested descriptors, while the table provides for each descriptor both an explanatory description of its intended function and a mapping of this intended function to a [CIDOC-CRM](cidoc-crm.org) path expressions.
+Each information category is represented here both in the form of a table and a semantic graph model. The graph presents an overview of the semantic model formed by the suggested descriptors, while the table provides for each descriptor both an explanatory description of its intended function and a mapping of this intended function to a [CIDOC-CRM](https://www.cidoc-crm.org/) path expressions.
 
-The mappings presented in the table use only the class and property identifiers of [CIDOC-CRM](cidoc-crm.org) adopting the formalism of:
+The mappings presented in the table use only the class and property identifiers of [CIDOC-CRM](https://www.cidoc-crm.org/) adopting the formalism of:
 
 * Classes: **E** + _ID_
 * Properties: **P** + _ID_
