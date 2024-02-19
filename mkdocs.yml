@@ -2,6 +2,8 @@ site_name: Artresearch.net Data Model
 site_url: https://docs.artresearch.net
 theme:
   name: material
+  features:
+  - navigation.expand
 nav:
   - Home: 'index.md'
   - Photo Archives: 'PhotoArchives.md'
@@ -25,3 +27,5 @@ markdown_extensions:
   - tables
 extra_css: 
   - extra.css
+
+ 
