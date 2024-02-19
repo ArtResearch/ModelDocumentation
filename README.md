@@ -1,4 +1,4 @@
-# Artresearch_documentation
+# ArtResearch.net data models
 
 
 clone the source files of Artresearch Documentation
@@ -11,28 +11,6 @@ git clone https://github.com/ArtResearch/ModelDocumentation.git
 
 ```bash
 cd ModelDocumentation/
-docker pull squidfunk/mkdocs-material
+mkdocs build
+mkdcs serve
 ```
-
-
-
-## start MkDocs localhost server
-(run in PowerShell if you are in Windows and) run:
-```bash
-docker run -d --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
-```
-
-open [localhost](http://localhost:8000/) to walk-through the documentation
-
-## start MkDocs cloud server with Let's Encrypt
-
-### Prerequisites
-
-[Nginx](https://github.com/ArtResearch/nginx-pharos) instace up and running 
-
-### Set up
-(run in PowerShell if you are in Windows and) run:
-```bash
-docker-compose up -d
-```
-

@@ -1,4 +1,4 @@
-# crm:E21_Person Reference Data Model
+# crm:E21_Person Reference Data Model (deprecated)
 
 __Author:__ __the name of the author__
 
