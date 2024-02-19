@@ -1,6 +1,6 @@
 #   Photo Archives
 
-The list of the Photo Archives is quoted below:
+The following is a list of Photo Archives included in the platform:
 
 *   [I Tatti](https://artresearch.net/resource/itatti/source/ITatti)
 *   [Zeri](https://artresearch.net/resource/zeri/source/Zeri)

@@ -1,8 +1,9 @@
 #   Photo Archives
 
-Authorities List
+The folling is a list of target authorities for entities:
 
-*  For Artists: [ULAN -  Getty](http://www.getty.edu/research/tools/vocabularies/ulan/)
-*  For Repositoties & Photographers: [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page)
-*  For Vocabulary: [AAT - Getty](http://vocab.getty.edu/aat/)
-*  For Places: [GeoNames](http://www.geonames.org/)
+*  Artists: [ULAN -  Getty](http://www.getty.edu/research/tools/vocabularies/ulan/)
+*  Terms: [AAT - Getty](http://vocab.getty.edu/aat/)
+*  Repositoties: [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page)
+*  Photographers: [Photographers' Identities Catalog](https://pic.nypl.org/)
+*  Places: [GeoNames](http://www.geonames.org/)
