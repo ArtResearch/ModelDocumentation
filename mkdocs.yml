@@ -1,4 +1,4 @@
-site_name: Artresearch Model Documentation
+site_name: Artresearch.net Data Model
 site_url: https://artresearch.github.io/ModelDocumentation/
 theme:
   name: material
