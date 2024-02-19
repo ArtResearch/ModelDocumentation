@@ -1,4 +1,5 @@
 site_name: Artresearch Model Documentation
+site_url: https://docs.artresearch.net
 theme:
   name: material
 nav:
