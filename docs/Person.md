@@ -11,7 +11,7 @@ The __fc:person__ semantic annotation refers to the persons which are shared by 
 ## Relationships
 ### Fundamental  Relationships 
 
-Fundamental relationships were created for the implementation of the Structured Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. Most of the fundamental relationships have been materialized based on the [Relationships](../Artist.md#enrichment-relationships) of the Authority.
+Fundamental relationships were created for the implementation of the Structured Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform. Most of the fundamental relationships have been materialized based on the [Relationships](Artist.md#enrichment-relationships) of the Authority.
 
 |Name|Relationship|Range|Description|
 |--|--|--|---|
