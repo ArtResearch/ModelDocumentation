@@ -1,5 +1,5 @@
 site_name: Artresearch Model Documentation
-site_url: https://artresaerch.github.io/ModelDocumentation/
+site_url: https://artresearch.github.io/ModelDocumentation/
 theme:
   name: material
 nav:
