@@ -3,7 +3,7 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - master
+      - master  # Make sure this is your default branch
 
 jobs:
   deploy:
@@ -22,8 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install mkdocs-material
 
-    - name: Build and deploy
-      run: |
-        mkdocs build
-        mkdocs gh-deploy --force
+    - name: Build the MkDocs Site
+      run: mkdocs build
 
+    - name: Copy CNAME file
+      run: cp CNAME site/CNAME
+
+    - name: Deploy to GitHub Pages
+      run: mkdocs gh-deploy --force
