@@ -1,0 +1,10 @@
+td {
+    /* word-break: break-word; */
+    white-space: pre-wrap;
+}
+.md-header{
+    background-color: #701919 !important;
+}
+
+.md-footer-meta.md-typeset { display: none;}
+

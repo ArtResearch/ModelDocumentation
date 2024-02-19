@@ -1,0 +1,1570 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.artresearch.net/Artist/">
+      
+      
+        <link rel="prev" href="../Photo/">
+      
+      
+        <link rel="next" href="../Person/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Artist - Artresearch.net Data Model</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#artist-reference-data-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Artresearch.net Data Model" class="md-header__button md-logo" aria-label="Artresearch.net Data Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Artresearch.net Data Model
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Artist
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Artresearch.net Data Model" class="md-nav__button md-logo" aria-label="Artresearch.net Data Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Artresearch.net Data Model
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PhotoArchives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photo Archives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Authorities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authorities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference Data Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reference Data Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Artwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artwork / Monument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Photo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photograph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Artist
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Artist
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationships
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrichment-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enrichment Relationships
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enrichment Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ulan-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      ULAN Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skos-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skos Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-section-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Section Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Section Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#person-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Person Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#person-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Person Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Person/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Photographer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photographer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Institution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Place/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Place
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationships
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrichment-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enrichment Relationships
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enrichment Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ulan-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      ULAN Relationships
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skos-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skos Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-section-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Section Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Section Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#person-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Person Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#person-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Person Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="artist-reference-data-model">Artist Reference Data Model</h1>
+<p><strong>Author:</strong> <strong>the name of the author</strong></p>
+<p><strong>Version:</strong> <strong>current version</strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>The <strong>fc:artist</strong> semantic annotation refers to the artists which are shared by the Photo Archives and are involved in the production of the <a href="http://vocab.getty.edu/page/aat/300133025">works of art</a> &amp; <a href="http://vocab.getty.edu/page/aat/300265418">built works</a> that are part of the Artresearch project and is the domain used for the semantic modeling described below.</p>
+<h2 id="relationships">Relationships</h2>
+<h3 id="fundamental-relationships">Fundamental Relationships</h3>
+<p>Fundamental relationships were created for the implementation of the Contextual Search and filtering functionality. Their extensive use was deemed necessary in order to improve the efficiency of the platform.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Relationship</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>created</td>
+<td>fr:Artist_created_Work</td>
+<td>fc:work</td>
+<td>Refers to all the works created by the documented artist.</td>
+</tr>
+<tr>
+<td>archives at</td>
+<td>fr:Artist_archives_at_Repository</td>
+<td>fc:institution</td>
+<td>Refers to the institution has archived the documented artist.</td>
+</tr>
+<tr>
+<td>has status</td>
+<td>fr:Artist_has_Copyright_Status</td>
+<td>fc:copyright_status</td>
+<td>Refers to the copyright status related with the documented artist.</td>
+</tr>
+<tr>
+<td>influenced creation of</td>
+<td>fr:Artist_influenced_creation_of_Work</td>
+<td>fc:work</td>
+<td>Refers to the works influenced by the documented artist.</td>
+</tr>
+<tr>
+<td>influenced</td>
+<td>fr:Artist_influenced_Artist</td>
+<td>fc:artist</td>
+<td>Refers to the artists who were influenced by the documented artist.</td>
+</tr>
+<tr>
+<td>from</td>
+<td>fr:Artist_from_Place</td>
+<td>fc:place</td>
+<td>Refers to the place of origin of the documented artist.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-relationships">Custom Relationships</h3>
+<p>custom relationships have been used</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Paths</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>has provider</td>
+<td>custom:has_provider</td>
+<td>Referes to the Photo Archive that provided the information of the referenced entity</td>
+</tr>
+<tr>
+<td>has type</td>
+<td>custom:has_type</td>
+<td>Referes to the custom type of refrerenced entity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enrichment-relationships">Enrichment Relationships</h3>
+<p>Relationships that are part of the model, of the enriched entities.</p>
+<h4 id="ulan-relationships">ULAN Relationships</h4>
+<p>Ulan relationships have been used</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>RelationShip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent Type non Preferred</td>
+<td><a href="http://vocab.getty.edu/ontology#agentTypeNonPreferred">agentTypeNonPreferred</a></td>
+</tr>
+<tr>
+<td>studen of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1102_student_of">ulan1102_student_of</a></td>
+</tr>
+<tr>
+<td>related to</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1500_related_to">ulan1500_related_to</a></td>
+</tr>
+<tr>
+<td>employee of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1217_employee_of">ulan1217_employee_of</a></td>
+</tr>
+<tr>
+<td>parent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1512_parent_of">ulan1512_parent_of</a></td>
+</tr>
+<tr>
+<td>distinguished from</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1007_distinguished_from">ulan1007_distinguished_from</a></td>
+</tr>
+<tr>
+<td>student of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1102_student_of">ulan1102_student_of</a></td>
+</tr>
+<tr>
+<td>employee of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1217_employee_of">ulan1217_employee_of</a></td>
+</tr>
+<tr>
+<td>parent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1512_parent_of">ulan1512_parent_of</a></td>
+</tr>
+<tr>
+<td>memebr of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1317_member_of">ulan1317_member_of</a></td>
+</tr>
+<tr>
+<td>child of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1511_child_of">ulan1511_child_of</a></td>
+</tr>
+<tr>
+<td>nephew or niece of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1531_nephew-niece_of">ulan1531_nephew-niece_of</a></td>
+</tr>
+<tr>
+<td>grandchild of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1513_grandchild_of">ulan1513_grandchild_of</a></td>
+</tr>
+<tr>
+<td>great or grandchild of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1516_great-grandchild_of">ulan1516_great-grandchild_of</a></td>
+</tr>
+<tr>
+<td>patron was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1202_patron_was">ulan1202_patron_was</a></td>
+</tr>
+<tr>
+<td>influenced</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1107_influenced">ulan1107_influenced</a></td>
+</tr>
+<tr>
+<td>formerly indentified with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1006_formerly_identified_with">ulan1006_formerly_identified_with</a></td>
+</tr>
+<tr>
+<td>teacher of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1101_teacher_of">ulan1101_teacher_of</a></td>
+</tr>
+<tr>
+<td>apprentice was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1106_apprentice_was">ulan1106_apprentice_was</a></td>
+</tr>
+<tr>
+<td>sibling of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1501_sibling_of">ulan1501_sibling_of</a></td>
+</tr>
+<tr>
+<td>collaborated with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1303_collaborated_with">ulan1303_collaborated_with</a></td>
+</tr>
+<tr>
+<td>founder of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2572_founder_of">ulan2572_founder_of</a></td>
+</tr>
+<tr>
+<td>partner of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1311_partner_of">ulan1311_partner_of</a></td>
+</tr>
+<tr>
+<td>gandparent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1514_gandparent_of">ulan1514_gandparent_of</a></td>
+</tr>
+<tr>
+<td>uncle or aunt of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1532_uncle-aunt_of">ulan1532_uncle-aunt_of</a></td>
+</tr>
+<tr>
+<td>related to</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1000_related_to">ulan1000_related_to</a></td>
+</tr>
+<tr>
+<td>cousin of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1521_cousin_of">ulan1521_cousin_of</a></td>
+</tr>
+<tr>
+<td>parent by marriage of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1552_parent_by_marriage_of">ulan1552_parent_by_marriage_of</a></td>
+</tr>
+<tr>
+<td>subling by marriage of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1551_sibling_by_marriage_of">ulan1551_sibling_by_marriage_of</a></td>
+</tr>
+<tr>
+<td>assisted by</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1308_assisted_by">ulan1308_assisted_by</a></td>
+</tr>
+<tr>
+<td>influenced by</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1108_influenced_by">ulan1108_influenced_by</a></td>
+</tr>
+<tr>
+<td>apprentice of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1105_apprentice_of">ulan1105_apprentice_of</a></td>
+</tr>
+<tr>
+<td>employee was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1218_employee_was">ulan1218_employee_was</a></td>
+</tr>
+<tr>
+<td>spouse of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1541_spouse_of">ulan1541_spouse_of</a></td>
+</tr>
+<tr>
+<td>colleague of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1301_colleague_of">ulan1301_colleague_of</a></td>
+</tr>
+<tr>
+<td>worked with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1305_worked_with">ulan1305_worked_with</a></td>
+</tr>
+<tr>
+<td>great or grandparent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1515_great-grandparent_of">ulan1515_great-grandparent_of</a></td>
+</tr>
+<tr>
+<td>assistant of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1307_assistant_of">ulan1307_assistant_of</a></td>
+</tr>
+<tr>
+<td>possibly identified with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1005_possibly_identified_with">ulan1005_possibly_identified_with</a></td>
+</tr>
+<tr>
+<td>estEnd</td>
+<td><a href="http://vocab.getty.edu/ontology#estEnd">estEnd</a></td>
+</tr>
+<tr>
+<td>friend of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2550_friend_of">ulan2550_friend_of</a></td>
+</tr>
+<tr>
+<td>step or child of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1561_step-child_of">ulan1561_step-child_of</a></td>
+</tr>
+<tr>
+<td>broaderNonConcept</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderNonConcept">broaderNonConcept</a></td>
+</tr>
+<tr>
+<td>broaderPartitive</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderPartitive">broaderPartitive</a></td>
+</tr>
+<tr>
+<td>broaderPartitiveExtended</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderPartitiveExtended">broaderPartitiveExtended</a></td>
+</tr>
+<tr>
+<td>associate of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1302_associate_of">ulan1302_associate_of</a></td>
+</tr>
+<tr>
+<td>teacher at</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2676_teacher_at">ulan2676_teacher_at</a></td>
+</tr>
+<tr>
+<td>court artist_to</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1213_court_artist_to">ulan1213_court_artist_to</a></td>
+</tr>
+<tr>
+<td>professor at</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2674_professor_at">ulan2674_professor_at</a></td>
+</tr>
+<tr>
+<td>step-parent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1562_step-parent_of">ulan1562_step-parent_of</a></td>
+</tr>
+<tr>
+<td>master of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1111_master_of">ulan1111_master_of</a></td>
+</tr>
+<tr>
+<td>child by marriage of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1553_child_by_marriage_of">ulan1553_child_by_marriage_of</a></td>
+</tr>
+<tr>
+<td>worked_with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1331_worked_with">ulan1331_worked_with</a></td>
+</tr>
+<tr>
+<td>member_was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1318_member_was">ulan1318_member_was</a></td>
+</tr>
+<tr>
+<td>ancestor_of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1582_ancestor_of">ulan1582_ancestor_of</a></td>
+</tr>
+<tr>
+<td>partner_in</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1313_partner_in">ulan1313_partner_in</a></td>
+</tr>
+<tr>
+<td>associated_with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1003_associated_with">ulan1003_associated_with</a></td>
+</tr>
+<tr>
+<td>romantic_partner_of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1547_romantic_partner_of">ulan1547_romantic_partner_of</a></td>
+</tr>
+<tr>
+<td>master was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1112_master_was">ulan1112_master_was</a></td>
+</tr>
+<tr>
+<td>relative by marriage</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1550_relative_by_marriage">ulan1550_relative_by_marriage</a></td>
+</tr>
+<tr>
+<td>patron of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1201_patron_of">ulan1201_patron_of</a></td>
+</tr>
+<tr>
+<td>professor was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2675_professor_was">ulan2675_professor_was</a></td>
+</tr>
+<tr>
+<td>fellow student of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1113_fellow_student_of">ulan1113_fellow_student_of</a></td>
+</tr>
+<tr>
+<td>donor of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1203_donor_of">ulan1203_donor_of</a></td>
+</tr>
+<tr>
+<td>school was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1322_school_was">ulan1322_school_was</a></td>
+</tr>
+<tr>
+<td>broaderNonPreferred</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderNonPreferred">broaderNonPreferred</a></td>
+</tr>
+<tr>
+<td>principal in</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1315_principal_in">ulan1315_principal_in</a></td>
+</tr>
+<tr>
+<td>adoptive parent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1554_adoptive_parent_of">ulan1554_adoptive_parent_of</a></td>
+</tr>
+<tr>
+<td>consort of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1542_consort_of">ulan1542_consort_of</a></td>
+</tr>
+<tr>
+<td>president of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2692_president_of">ulan2692_president_of</a></td>
+</tr>
+<tr>
+<td>guardian of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1571_guardian_of">ulan1571_guardian_of</a></td>
+</tr>
+<tr>
+<td>performs with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1306_performs_with">ulan1306_performs_with</a></td>
+</tr>
+<tr>
+<td>dedicatee of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2781_dedicatee_of">ulan2781_dedicatee_of</a></td>
+</tr>
+<tr>
+<td>successor of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1411_successor_of">ulan1411_successor_of</a></td>
+</tr>
+<tr>
+<td>predecessor of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1412_predecessor_of">ulan1412_predecessor_of</a></td>
+</tr>
+<tr>
+<td>student at</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2828_student_at">ulan2828_student_at</a></td>
+</tr>
+<tr>
+<td>director of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2574_director_of">ulan2574_director_of</a></td>
+</tr>
+<tr>
+<td>half-sibling of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1556_half-sibling_of">ulan1556_half-sibling_of</a></td>
+</tr>
+<tr>
+<td>broaderGeneric</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderGeneric">broaderGeneric</a></td>
+</tr>
+<tr>
+<td>broaderGenericExtended</td>
+<td><a href="http://vocab.getty.edu/ontology#broaderGenericExtended">broaderGenericExtended</a></td>
+</tr>
+<tr>
+<td>client of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1205_client_of">ulan1205_client_of</a></td>
+</tr>
+<tr>
+<td>possibly related to</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1590_possibly_related_to">ulan1590_possibly_related_to</a></td>
+</tr>
+<tr>
+<td>client was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1206_client_was">ulan1206_client_was</a></td>
+</tr>
+<tr>
+<td>owned by</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2779_owned_by">ulan2779_owned_by</a></td>
+</tr>
+<tr>
+<td>leader of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2696_leader_of">ulan2696_leader_of</a></td>
+</tr>
+<tr>
+<td>school of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1321_school_of">ulan1321_school_of</a></td>
+</tr>
+<tr>
+<td>artist to</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1211_artist_to">ulan1211_artist_to</a></td>
+</tr>
+<tr>
+<td>owner of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2778_owner_of">ulan2778_owner_of</a></td>
+</tr>
+<tr>
+<td>descendant of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1581_descendant_of">ulan1581_descendant_of</a></td>
+</tr>
+<tr>
+<td>adopted child of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1555_adopted_child_of">ulan1555_adopted_child_of</a></td>
+</tr>
+<tr>
+<td>representative of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2794_representative_of">ulan2794_representative_of</a></td>
+</tr>
+<tr>
+<td>godparent of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1574_godparent_of">ulan1574_godparent_of</a></td>
+</tr>
+<tr>
+<td>worker was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1332_worker_was">ulan1332_worker_was</a></td>
+</tr>
+<tr>
+<td>representative was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2795_representative_was">ulan2795_representative_was</a></td>
+</tr>
+<tr>
+<td>teacher was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2677_teacher_was">ulan2677_teacher_was</a></td>
+</tr>
+<tr>
+<td>partner was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1314_partner_was">ulan1314_partner_was</a></td>
+</tr>
+<tr>
+<td>ward of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1573_ward_of">ulan1573_ward_of</a></td>
+</tr>
+<tr>
+<td>significant other of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1544_significant_other_of">ulan1544_significant_other_of</a></td>
+</tr>
+<tr>
+<td>court artist was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1214_court_artist_was">ulan1214_court_artist_was</a></td>
+</tr>
+<tr>
+<td>publisher was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan2650_publisher_was">ulan2650_publisher_was</a></td>
+</tr>
+<tr>
+<td>advisor of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1309_advisor_of">ulan1309_advisor_of</a></td>
+</tr>
+<tr>
+<td>meaning-usage overlaps with</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1008_meaning_-usage_overlaps_with">ulan1008_meaning_-usage_overlaps_with</a></td>
+</tr>
+<tr>
+<td>consort was</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1543_consort_was">ulan1543_consort_was</a></td>
+</tr>
+<tr>
+<td>step-sibling of</td>
+<td><a href="http://vocab.getty.edu/ontology#ulan1557_step-sibling_of">ulan1557_step-sibling_of</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="skos-relationships">Skos Relationships</h4>
+<p>Skos relationships have been used</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>RelationShip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alternative label</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#altLabel">altLabel</a></td>
+</tr>
+<tr>
+<td>change Note</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#changeNote">changeNote</a></td>
+</tr>
+<tr>
+<td>note</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#note">note</a></td>
+</tr>
+<tr>
+<td>scopeNote</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#scopeNote">scopeNote</a></td>
+</tr>
+<tr>
+<td>preferable Label</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#prefLabel">prefLabel</a></td>
+</tr>
+<tr>
+<td>is in mapping relation with</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#mappingRelation">mappingRelation</a></td>
+</tr>
+<tr>
+<td>has close match</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#closeMatch">closeMatch</a></td>
+</tr>
+<tr>
+<td>has exact match</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#exactMatch">exactMatch</a></td>
+</tr>
+<tr>
+<td>related</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#related">related</a></td>
+</tr>
+<tr>
+<td>narrower</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#narrower">narrower</a></td>
+</tr>
+<tr>
+<td>broader</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#broader">broader</a></td>
+</tr>
+<tr>
+<td>broaderTransitive</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#broaderTransitive">broaderTransitive</a></td>
+</tr>
+<tr>
+<td>member</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#member">member</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="model-section-description">Model Section Description</h2>
+<p>The categories which are used for the representation of the information related to an artist are the same with those of persons.</p>
+<p>The fields used to describe a person can be functionally grouped according to higher level units in order to allow for an easier approach to the entry and navigation of the data by information category. The information categories identified have been enumerated in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Person Info</td>
+<td style="text-align: left;">This information category gathers  together descriptos  used for assigning names,types to a person, both at present and  historically, as well as descriptors relevant to the tracking of the birth and death of a person</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Person Relationships</td>
+<td style="text-align: left;">This information category presents information of relationships related to the documented person.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person-info">Person Info</h3>
+<p>The attribution of names and types to persons is a basic human activity. A chief factor in disambiguating which person is referred to in historical texts is understanding the various names and identifiers that have been given to an individual at different moments. Likewise, additional classifiers of the individual as such, such as gender, help in the disambiguation, in an information system, of the reference to one real-world individual from another and biographical information, such as their birth and death. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Identifier</td>
+<td style="text-align: left;">This field is used to indicate an identifier attributed to the documented person.</td>
+<td style="text-align: left;">crm:P1 &rarr; crm:E42 &rarr; rdfs:label</td>
+</tr>
+<tr>
+<td style="text-align: left;">Residence/Location</td>
+<td style="text-align: left;">this field is used to indicate the residnce/location attributed to the person</td>
+<td style="text-align: left;">crm:P74 &rarr; rdfs:label</td>
+</tr>
+<tr>
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">This field is used to record the main name attributed to the documented person.</td>
+<td style="text-align: left;">crm:P1 &rarr; crm:E41 &rarr; rdfs:label</td>
+</tr>
+<tr>
+<td style="text-align: left;">Name Type</td>
+<td style="text-align: left;">This field is used to indicate a type of a specific part of the name attributed to the documented person.</td>
+<td style="text-align: left;">crm:P1 &rarr; crm:E41 &rarr; crm:P2_has_type &rarr; crm:E55_Type</td>
+</tr>
+<tr>
+<td style="text-align: left;">Place of Birth</td>
+<td style="text-align: left;">This field is used to indicate the place of birth of the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Place_of_Birth</td>
+</tr>
+<tr>
+<td style="text-align: left;">Place of Death</td>
+<td style="text-align: left;">This field is used to indicate the place of death of the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Place_of_Death</td>
+</tr>
+<tr>
+<td style="text-align: left;">Active</td>
+<td style="text-align: left;">This field is used to indicate the period within the documented person was active.</td>
+<td style="text-align: left;">crm:P14i &rarr; crm:F51_Pursuit &rarr; crm:P4 &rarr; crm:E52 &rarr; crm:P82</td>
+</tr>
+<tr>
+<td style="text-align: left;">Active in</td>
+<td style="text-align: left;">This fields is used to indicate where the documented person is active in</td>
+<td style="text-align: left;">crm:P74</td>
+</tr>
+<tr>
+<td style="text-align: left;">Institution</td>
+<td style="text-align: left;">This field is used to record the institution to which the documented person is or was memebr of.</td>
+<td style="text-align: left;">crm:P107 &rarr; custom:noType</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nationality</td>
+<td style="text-align: left;">This field is used to record the association of the documented person to a national body, usually indicating citizenship.</td>
+<td style="text-align: left;">fr:Person_has_Nationality &rarr; fc:Person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gender</td>
+<td style="text-align: left;">This field is used to record the gender ascribed of the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Gender &rarr; xsd:string</td>
+</tr>
+<tr>
+<td style="text-align: left;">Roles</td>
+<td style="text-align: left;">This field is used to record the roles attributed to the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Role</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Birth</td>
+<td style="text-align: left;">This field is used to record the  date for the birth of the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Date_of_Birth|fr:Artist_has_Date_of_Birth &rarr; xsd:date</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Death</td>
+<td style="text-align: left;">This field is used to record the  date for the death of the documented person.</td>
+<td style="text-align: left;">fr:Person_has_Date_of_Death|fr:Artist_has_Date_of_Death &rarr; xsd:date</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partner</td>
+<td style="text-align: left;">This field is used to record the partners attributed to the documented person.</td>
+<td style="text-align: left;">fr:Person_partner_of_Person &rarr; fc:Person</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person-relationships">Person Relationships</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Teachers</td>
+<td style="text-align: left;">This field is used to indicate the theachers who are attributed to the documented person.</td>
+<td style="text-align: left;">fr:Person_student_of_Person|fr:Person_apprentice_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">School Of</td>
+<td style="text-align: left;">This field is used to indicate the person who is school of the dociumented person.</td>
+<td style="text-align: left;">fr:Person_school_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Influenced by</td>
+<td style="text-align: left;">This field is used to indicate the person who influenced the dociumented person.</td>
+<td style="text-align: left;">fr:Person_influenced_by_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Collaborators</td>
+<td style="text-align: left;">This field is used to indicate Collaborators of the documented person, retrieved from ULAN.</td>
+<td style="text-align: left;">fr:Person_collaborated_with_Person|fr:Person_assisted_by_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Students</td>
+<td style="text-align: left;">This field is used to indicate the students of the documented person</td>
+<td style="text-align: left;">fr:Person_teacher_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Influenced</td>
+<td style="text-align: left;">This field is used to indicate the persons which influenced the documented person</td>
+<td style="text-align: left;">fr:Person_influenced_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Member Of</td>
+<td style="text-align: left;">This field is used to indicate the Person or Group of which the documented person is member of</td>
+<td style="text-align: left;">fr:Person_member_of_Group|fr:Person_member_of_Person &rarr; fc:person|fc:group</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parents</td>
+<td style="text-align: left;">This field is used to indicate the parents of the documented person</td>
+<td style="text-align: left;">fr:Person_child_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Siblings</td>
+<td style="text-align: left;">This field is used to indicate the siblings of the documented person</td>
+<td style="text-align: left;">fr:Person_sibling_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partner</td>
+<td style="text-align: left;">This field is used to indicate the partners of the documented person</td>
+<td style="text-align: left;">fr:Person_partner_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spouse</td>
+<td style="text-align: left;">This fields is used to indicate the spouse of the documented person</td>
+<td style="text-align: left;">fr:Person_spouse_of_Person &rarr; fc:person</td>
+</tr>
+<tr>
+<td style="text-align: left;">Children</td>
+<td style="text-align: left;">This field is used to indicate the children of the documented person</td>
+<td style="text-align: left;">fr:Person_parent_of_Person &rarr; fc:person</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
