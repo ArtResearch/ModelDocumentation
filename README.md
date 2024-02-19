@@ -1,4 +1,4 @@
-# ArtResearch.net data models
+# ArtResearch.net Data Models
 
 
 clone the source files of Artresearch Documentation
